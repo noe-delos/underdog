@@ -34,16 +34,16 @@ export default function LoginPage() {
 
             {/* Hero Content */}
             <h2 className="text-4xl font-bold leading-tight mb-6">
-              Devenez un
+              Master
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#E7B220] to-yellow-300">
-                vendeur d'élite
+                Cold Calling
               </span>
             </h2>
 
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Entraînez-vous avec des agents IA ultra-réalistes et perfectionnez
-              vos techniques de vente avec Underdog Sales, experts en formation
-              commerciale.
+              Practice with ultra-realistic AI agents and perfect your cold
+              calling techniques with Underdog Sales, cold calling training
+              experts.
             </p>
 
             {/* Features */}
@@ -56,7 +56,7 @@ export default function LoginPage() {
                   />
                 </div>
                 <span className="text-white/90">
-                  Simulations de vente réalistes
+                  Realistic cold calling simulations
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -67,7 +67,7 @@ export default function LoginPage() {
                   />
                 </div>
                 <span className="text-white/90">
-                  Coaching personnalisé et détaillé
+                  Personalized coaching & feedback
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -77,9 +77,7 @@ export default function LoginPage() {
                     className="w-5 h-5 text-green-300"
                   />
                 </div>
-                <span className="text-white/90">
-                  Méthodes de vendeurs d'élite
-                </span>
+                <span className="text-white/90">Elite sales methods</span>
               </div>
             </div>
           </div>
@@ -103,10 +101,10 @@ export default function LoginPage() {
           {/* Header */}
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-2">
-              Bon retour parmi nous
+              Welcome back
             </h2>
             <p className="text-gray-600">
-              Connectez-vous pour accéder à vos simulations de vente
+              Sign in to access your cold calling simulations
             </p>
           </div>
 
@@ -118,7 +116,7 @@ export default function LoginPage() {
                   htmlFor="email"
                   className="block text-sm font-medium text-gray-700 mb-2"
                 >
-                  Adresse email
+                  Email address
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -133,7 +131,7 @@ export default function LoginPage() {
                     type="email"
                     required
                     className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-xl shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#021945] focus:border-transparent transition-all duration-200"
-                    placeholder="votre@email.com"
+                    placeholder="your@email.com"
                   />
                 </div>
               </div>
@@ -143,7 +141,7 @@ export default function LoginPage() {
                   htmlFor="password"
                   className="block text-sm font-medium text-gray-700 mb-2"
                 >
-                  Mot de passe
+                  Password
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -171,7 +169,7 @@ export default function LoginPage() {
                 className="group relative w-full flex justify-center items-center gap-2 py-3 px-4 border border-transparent text-sm font-semibold rounded-xl text-white bg-gradient-to-r from-[#021945] to-[#E7B220] hover:from-[#0A2E4B] hover:to-[#C5A465] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#021945] transform transition-all duration-200 hover:scale-[1.02] shadow-lg hover:shadow-xl"
               >
                 <Icon icon="material-symbols:login" className="w-5 h-5" />
-                Se connecter
+                Sign in
               </button>
             </div>
           </form>
@@ -179,12 +177,12 @@ export default function LoginPage() {
           {/* Signup Link */}
           <div className="text-center">
             <p className="text-sm text-gray-600">
-              Vous n'avez pas encore de compte ?{" "}
+              Don't have an account yet?{" "}
               <Link
                 href="/signup"
                 className="font-medium text-[#021945] hover:text-[#E7B220] transition-colors duration-200"
               >
-                Créer un compte
+                Create account
               </Link>
             </p>
           </div>
@@ -192,19 +190,19 @@ export default function LoginPage() {
           {/* Footer */}
           <div className="text-center">
             <p className="text-xs text-gray-500">
-              En vous connectant, vous acceptez nos{" "}
+              By signing in, you agree to our{" "}
               <a
                 href="#"
                 className="font-medium text-[#021945] hover:text-[#E7B220]"
               >
-                conditions d'utilisation
+                terms of service
               </a>{" "}
-              et notre{" "}
+              and{" "}
               <a
                 href="#"
                 className="font-medium text-[#021945] hover:text-[#E7B220]"
               >
-                politique de confidentialité
+                privacy policy
               </a>
               .
             </p>

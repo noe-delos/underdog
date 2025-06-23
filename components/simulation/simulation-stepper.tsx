@@ -42,39 +42,39 @@ const callTypes = [
   {
     id: "cold_call" as CallType,
     title: "🔍 Cold call",
-    objective: "Décrocher un rendez-vous",
-    criteria: "RDV confirmé avec date/heure",
+    objective: "Schedule an appointment",
+    criteria: "Meeting confirmed with date/time",
   },
   {
     id: "discovery_meeting" as CallType,
-    title: "📅 Rendez-vous de découverte",
-    objective: "Qualifier le besoin et budgeter",
-    criteria: "Budget confirmé + besoins qualifiés",
+    title: "📅 Discovery meeting",
+    objective: "Qualify needs and budget",
+    criteria: "Budget confirmed + needs qualified",
   },
   {
     id: "product_demo" as CallType,
-    title: "💻 Démo produit",
-    objective: "Convaincre avec une proposition personnalisée",
-    criteria: "Intérêt confirmé + next step défini",
+    title: "💻 Product demo",
+    objective: "Convince with personalized proposal",
+    criteria: "Interest confirmed + next step defined",
   },
   {
     id: "closing_call" as CallType,
-    title: "✅ Appel de closing",
-    objective: "Signer le contrat",
-    criteria: "Accord verbal ou signature",
+    title: "✅ Closing call",
+    objective: "Sign the contract",
+    criteria: "Verbal agreement or signature",
   },
   {
     id: "follow_up_call" as CallType,
-    title: "🔄 Appel de relance",
-    objective: "Relancer après devis/proposition",
-    criteria: "Déblocage d'objections + nouveau délai",
+    title: "🔄 Follow-up call",
+    objective: "Follow up after quote/proposal",
+    criteria: "Objections handled + new timeline",
   },
 ];
 
 const historiqueOptions: HistoriqueRelation[] = [
-  "Premier contact",
-  "2ème appel",
-  "Relance post-devis",
+  "First contact",
+  "2nd call",
+  "Post-quote follow-up",
 ];
 
 export function SimulationStepper() {
@@ -91,7 +91,7 @@ export function SimulationStepper() {
     context: {
       secteur: "",
       company: "",
-      historique_relation: "Premier contact",
+      historique_relation: "First contact",
     },
   });
 
@@ -122,7 +122,7 @@ export function SimulationStepper() {
             secteur: parsedConfig.context?.secteur || "",
             company: parsedConfig.context?.company || "",
             historique_relation:
-              parsedConfig.context?.historique_relation || "Premier contact",
+              parsedConfig.context?.historique_relation || "First contact",
           },
         }));
       }
@@ -320,10 +320,10 @@ export function SimulationStepper() {
       <Card className="min-h-[500px] shadow-soft">
         <CardHeader>
           <CardTitle>
-            {currentStep === 1 && "Choisissez votre prospect"}
-            {currentStep === 2 && "Sélectionnez le produit"}
-            {currentStep === 3 && "Type d'appel"}
-            {currentStep === 4 && "Contexte et objectif"}
+            {currentStep === 1 && "Choose your prospect"}
+            {currentStep === 2 && "Select the product"}
+            {currentStep === 3 && "Call type"}
+            {currentStep === 4 && "Context and objective"}
           </CardTitle>
         </CardHeader>
         <CardContent className="p-6">
@@ -344,8 +344,7 @@ export function SimulationStepper() {
               {currentStep === 1 && (
                 <div className="space-y-4">
                   <p className="text-muted-foreground">
-                    Sélectionnez le prospect avec qui vous souhaitez vous
-                    entraîner
+                    Select the prospect you want to practice with
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {agents.map((agent) => (
@@ -399,7 +398,7 @@ export function SimulationStepper() {
               {currentStep === 2 && (
                 <div className="space-y-4">
                   <p className="text-muted-foreground">
-                    Choisissez le produit que vous allez présenter
+                    Choose the product you will present
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {products.map((product) => (
@@ -453,7 +452,7 @@ export function SimulationStepper() {
               {currentStep === 3 && (
                 <div className="space-y-4">
                   <p className="text-muted-foreground">
-                    Définissez l'objectif de votre entraînement
+                    Define your training objective
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {callTypes.map((callType) => (
@@ -478,10 +477,10 @@ export function SimulationStepper() {
                                 {callType.title}
                               </h3>
                               <p className="text-sm">
-                                <strong>Objectif:</strong> {callType.objective}
+                                <strong>Objective:</strong> {callType.objective}
                               </p>
                               <p className="text-xs text-muted-foreground">
-                                <strong>Critères de réussite:</strong>{" "}
+                                <strong>Success Criteria:</strong>{" "}
                                 {callType.criteria}
                               </p>
                             </div>
@@ -498,9 +497,9 @@ export function SimulationStepper() {
                 <div className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-4">
-                      <h3 className="font-semibold">Contexte de l'appel</h3>
+                      <h3 className="font-semibold">Call context</h3>
                       <div>
-                        <Label htmlFor="secteur">Secteur d'activité</Label>
+                        <Label htmlFor="secteur">Industry sector</Label>
                         <Input
                           id="secteur"
                           placeholder="Ex: E-commerce, SaaS, Finance..."
@@ -528,7 +527,7 @@ export function SimulationStepper() {
                         />
                       </div>
                       <div>
-                        <Label htmlFor="company">Nom de l'entreprise</Label>
+                        <Label htmlFor="company">Company name</Label>
                         <Input
                           id="company"
                           placeholder="Ex: TechCorp, StartupXYZ..."
@@ -556,9 +555,7 @@ export function SimulationStepper() {
                         />
                       </div>
                       <div>
-                        <Label htmlFor="historique">
-                          Historique de la relation
-                        </Label>
+                        <Label htmlFor="historique">Relationship history</Label>
                         <select
                           className="w-full p-2 border rounded-md shadow-soft mt-3"
                           value={config.context.historique_relation}
@@ -593,14 +590,14 @@ export function SimulationStepper() {
                       </div>
                     </div>
                     <div className="space-y-4">
-                      <h3 className="font-semibold">Objectif personnel</h3>
+                      <h3 className="font-semibold">Personal objective</h3>
                       <div>
                         <Label htmlFor="goal">
-                          Décrivez votre objectif pour cet appel
+                          Describe your objective for this call
                         </Label>
                         <Textarea
                           id="goal"
-                          placeholder="Ex: Convaincre le prospect de l'intérêt de notre solution CRM et obtenir un rendez-vous de démonstration..."
+                          placeholder="Ex: Convince the prospect of the value of our CRM solution and get a demo appointment..."
                           value={config.goal}
                           onChange={(e) => {
                             const newConfig = {
@@ -625,7 +622,7 @@ export function SimulationStepper() {
                   {/* Preview */}
                   <div className="border-t pt-6">
                     <h3 className="font-semibold mb-4">
-                      Récapitulatif de votre entraînement
+                      Your training summary
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                       <Card className="pt-4 shadow-soft">
@@ -659,7 +656,7 @@ export function SimulationStepper() {
                       </Card>
                       <Card className="py-4 shadow-soft">
                         <CardContent className="p-4 py-0">
-                          <h4 className="font-medium mb-2">Produit</h4>
+                          <h4 className="font-medium mb-2">Product</h4>
                           <p className="text-sm font-medium">
                             {config.product?.name}
                           </p>
@@ -670,7 +667,7 @@ export function SimulationStepper() {
                       </Card>
                       <Card className="pt-0 shadow-soft">
                         <CardContent className="p-4">
-                          <h4 className="font-medium mb-2">Type d'appel</h4>
+                          <h4 className="font-medium mb-2">Call type</h4>
                           <p className="text-sm">
                             {
                               callTypes.find((ct) => ct.id === config.callType)
@@ -696,12 +693,12 @@ export function SimulationStepper() {
           disabled={currentStep === 1}
         >
           <ChevronLeft className="h-4 w-4 mr-2" />
-          Précédent
+          Previous
         </Button>
 
         {currentStep < 4 ? (
           <Button onClick={nextStep} disabled={!canProceed()}>
-            Suivant
+            Next
             <ChevronRight className="h-4 w-4 ml-2" />
           </Button>
         ) : (
@@ -715,7 +712,7 @@ export function SimulationStepper() {
             ) : (
               <Play className="h-4 w-4 mr-2" />
             )}
-            {startingSimulation ? "Démarrage..." : "Démarrer l'entraînement"}
+            {startingSimulation ? "Starting..." : "Start training"}
           </Button>
         )}
       </div>

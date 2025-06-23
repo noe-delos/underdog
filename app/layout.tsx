@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Underdog Sales - Entraînement Commercial IA",
-  description: "Entraînez-vous avec des agents IA ultra-réalistes",
+  title: "Underdog Sales - Cold Calling Training AI",
+  description: "Master cold calling with ultra-realistic AI agents",
 };
 
 export default function RootLayout({

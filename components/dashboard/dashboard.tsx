@@ -150,10 +150,10 @@ export function Dashboard() {
       (now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24)
     );
 
-    if (diffInDays === 0) return "Aujourd'hui";
-    if (diffInDays === 1) return "Hier";
-    if (diffInDays < 7) return `Il y a ${diffInDays} jours`;
-    return date.toLocaleDateString("fr-FR", { day: "numeric", month: "short" });
+    if (diffInDays === 0) return "Today";
+    if (diffInDays === 1) return "Yesterday";
+    if (diffInDays < 7) return `${diffInDays} days ago`;
+    return date.toLocaleDateString("en-US", { day: "numeric", month: "short" });
   };
 
   const handleAgentClick = (agent: Agent) => {
@@ -242,13 +242,13 @@ export function Dashboard() {
         <div className="flex items-center justify-between mb-6">
           <div className="flex items-center gap-2">
             <div>
-              <h1 className="text-2xl font-bold">Vos entraînements</h1>
+              <h1 className="text-2xl font-bold">Your training sessions</h1>
               <p className="text-muted-foreground">
-                Liste de vos entraînements de vente
+                List of your cold calling training sessions
               </p>
             </div>
             <Badge variant="secondary" className="text-sm font-medium">
-              {conversations.length} entraînement
+              {conversations.length} session
               {conversations.length !== 1 ? "s" : ""}
             </Badge>
           </div>
@@ -271,7 +271,7 @@ export function Dashboard() {
                         className="h-6 w-6 text-muted-foreground"
                       />
                       <p className="text-sm font-medium text-muted-foreground text-center">
-                        Nouvel entraînement
+                        New training
                       </p>
                     </div>
                   </Card>
@@ -304,7 +304,7 @@ export function Dashboard() {
                                     conversation.agents?.lastname
                                       ? `${conversation.agents.firstname} ${conversation.agents.lastname}`
                                       : conversation.agents?.name ||
-                                        "Agent inconnu"}
+                                        "Agent unknown"}
                                   </p>
                                   <p className="text-xs text-muted-foreground max-w-28 truncate">
                                     {conversation.agents?.job_title}
@@ -337,10 +337,10 @@ export function Dashboard() {
                   alt="Underdog Sales Logo"
                 />
                 <p className="text-sm font-semibold text-white mb-1 drop-shadow-md">
-                  Devenez un vendeur d'élite
+                  Master cold calling
                 </p>
                 <p className="text-xs text-white/90 mb-4 max-w-[15rem] drop-shadow-sm">
-                  Underdog Sales • Experts en formation commerciale
+                  Underdog Sales • Cold calling experts
                 </p>
                 <Button
                   variant="default"
@@ -348,7 +348,7 @@ export function Dashboard() {
                   className="bg-white/20 hover:bg-white/30 text-white border-white/30 backdrop-blur-sm transition-all duration-300 hover:scale-105"
                   onClick={() => window.open("tel:0146740014", "_blank")}
                 >
-                  Contactez-nous
+                  Contact us
                 </Button>
               </div>
             </Card>
@@ -359,11 +359,11 @@ export function Dashboard() {
       {/* Agents Section */}
       <motion.section variants={item}>
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold">Agents disponibles</h2>
+          <h2 className="text-xl font-semibold">Available prospects</h2>
           <Link href="/agents">
             <Button variant="outline" size="sm">
               <Icon icon="mdi:plus" className="h-4 w-4 mr-2" />
-              Créer un agent
+              Create prospect
             </Button>
           </Link>
         </div>
@@ -416,11 +416,11 @@ export function Dashboard() {
       {/* Products Section */}
       <motion.section variants={item}>
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-semibold">Produits</h2>
+          <h2 className="text-xl font-semibold">Products</h2>
           <Link href="/products">
             <Button variant="outline" size="sm">
               <Icon icon="mdi:plus" className="h-4 w-4 mr-2" />
-              Ajouter un produit
+              Add product
             </Button>
           </Link>
         </div>

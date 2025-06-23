@@ -34,16 +34,16 @@ export default function SignupPage() {
 
             {/* Hero Content */}
             <h2 className="text-4xl font-bold leading-tight mb-6">
-              Commencez votre
+              Start your
               <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#E7B220] to-yellow-300">
-                formation d'élite
+                Elite Training
               </span>
             </h2>
 
             <p className="text-xl text-white/90 mb-8 leading-relaxed">
-              Rejoignez des milliers de commerciaux qui améliorent leurs
-              performances grâce à l'entraînement personnalisé d'Underdog Sales,
-              experts en formation commerciale.
+              Join thousands of salespeople who improve their performance
+              through personalized training from Underdog Sales, cold calling
+              experts.
             </p>
 
             {/* Features */}
@@ -56,7 +56,7 @@ export default function SignupPage() {
                   />
                 </div>
                 <span className="text-white/90">
-                  Simulations de vente réalistes
+                  Realistic cold calling simulations
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -67,7 +67,7 @@ export default function SignupPage() {
                   />
                 </div>
                 <span className="text-white/90">
-                  Coaching personnalisé et détaillé
+                  Personalized coaching & feedback
                 </span>
               </div>
               <div className="flex items-center gap-3">
@@ -77,9 +77,7 @@ export default function SignupPage() {
                     className="w-5 h-5 text-green-300"
                   />
                 </div>
-                <span className="text-white/90">
-                  Méthodes de vendeurs d'élite
-                </span>
+                <span className="text-white/90">Elite sales methods</span>
               </div>
             </div>
           </div>
@@ -105,11 +103,9 @@ export default function SignupPage() {
           {/* Header */}
           <div className="text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-2">
-              Créez votre compte
+              Create your account
             </h2>
-            <p className="text-gray-600">
-              Rejoignez la communauté des vendeurs d'élite
-            </p>
+            <p className="text-gray-600">Join the elite sales community</p>
           </div>
 
           {/* Form */}
@@ -118,12 +114,12 @@ export default function SignupPage() {
           {/* Login Link */}
           <div className="text-center">
             <p className="text-sm text-gray-600">
-              Vous avez déjà un compte ?{" "}
+              Already have an account?{" "}
               <Link
                 href="/login"
                 className="font-medium text-[#021945] hover:text-[#E7B220] transition-colors duration-200"
               >
-                Se connecter
+                Sign in
               </Link>
             </p>
           </div>

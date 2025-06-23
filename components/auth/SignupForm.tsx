@@ -46,7 +46,7 @@ export default function SignupForm() {
             htmlFor="email"
             className="block text-sm font-medium text-gray-700 mb-2"
           >
-            Adresse email
+            Email address
           </label>
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -61,7 +61,7 @@ export default function SignupForm() {
               type="email"
               required
               className="block w-full pl-10 pr-3 py-3 border border-gray-300 rounded-xl shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200"
-              placeholder="votre@email.com"
+              placeholder="your@email.com"
             />
           </div>
         </div>
@@ -71,7 +71,7 @@ export default function SignupForm() {
             htmlFor="password"
             className="block text-sm font-medium text-gray-700 mb-2"
           >
-            Mot de passe
+            Password
           </label>
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -106,7 +106,7 @@ export default function SignupForm() {
               />
             </button>
           </div>
-          <p className="mt-1 text-xs text-gray-500">Minimum 6 caractères</p>
+          <p className="mt-1 text-xs text-gray-500">Minimum 6 characters</p>
         </div>
 
         <div>
@@ -114,7 +114,7 @@ export default function SignupForm() {
             htmlFor="confirmPassword"
             className="block text-sm font-medium text-gray-700 mb-2"
           >
-            Confirmer le mot de passe
+            Confirm password
           </label>
           <div className="relative">
             <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -154,9 +154,7 @@ export default function SignupForm() {
             </button>
           </div>
           {confirmPassword && !passwordsMatch && (
-            <p className="mt-1 text-xs text-red-600">
-              Les mots de passe ne correspondent pas
-            </p>
+            <p className="mt-1 text-xs text-red-600">Passwords don't match</p>
           )}
         </div>
       </div>
@@ -174,19 +172,19 @@ export default function SignupForm() {
         </div>
         <div className="ml-3 text-sm">
           <label htmlFor="terms" className="text-gray-700">
-            J'accepte les{" "}
+            I agree to the{" "}
             <a
               href="#"
               className="font-medium text-purple-600 hover:text-purple-500"
             >
-              conditions d'utilisation
+              terms of service
             </a>{" "}
-            et la{" "}
+            and{" "}
             <a
               href="#"
               className="font-medium text-purple-600 hover:text-purple-500"
             >
-              politique de confidentialité
+              privacy policy
             </a>
           </label>
         </div>
@@ -204,12 +202,12 @@ export default function SignupForm() {
           {isSubmitting ? (
             <>
               <Icon icon="eos-icons:loading" className="w-5 h-5 animate-spin" />
-              Création en cours...
+              Creating account...
             </>
           ) : (
             <>
               <Icon icon="material-symbols:person-add" className="w-5 h-5" />
-              Créer mon compte
+              Create my account
             </>
           )}
         </button>

@@ -120,7 +120,7 @@ export function Header({ breadcrumbs }: HeaderProps) {
                 variant="outline"
                 className="w-full"
               >
-                Disconnect
+                Sign out
               </Button>
             </div>
           </PopoverContent>

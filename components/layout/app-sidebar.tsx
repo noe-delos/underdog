@@ -34,12 +34,12 @@ const items = [
     icon: "fluent:home-24-filled",
   },
   {
-    title: "Prospect",
+    title: "Prospects",
     url: "/agents",
     icon: "fluent:people-12-filled",
   },
   {
-    title: "Produits",
+    title: "Products",
     url: "/products",
     icon: "majesticons:box",
   },
@@ -114,10 +114,10 @@ export function AppSidebar() {
       (now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24)
     );
 
-    if (diffInDays === 0) return "Aujourd'hui";
-    if (diffInDays === 1) return "Hier";
-    if (diffInDays < 7) return `Il y a ${diffInDays} jours`;
-    return date.toLocaleDateString("fr-FR", { day: "numeric", month: "short" });
+    if (diffInDays === 0) return "Today";
+    if (diffInDays === 1) return "Yesterday";
+    if (diffInDays < 7) return `${diffInDays} days ago`;
+    return date.toLocaleDateString("en-US", { day: "numeric", month: "short" });
   };
 
   const getCallTypeEmoji = (callType: string) => {
@@ -169,7 +169,7 @@ export function AppSidebar() {
               <Link href="/simulation/configure">
                 <Button className="w-[60%] underdog-gradient font-bold hover:brightness-105 py-5 border-amber-200/50 text-white transition-opacity">
                   <Icon icon="mdi:phone" className="mr-1 h-4 w-4" />
-                  <p className="text-md font-bold">Démarrer !</p>
+                  <p className="text-md font-bold">Start now!</p>
                 </Button>
               </Link>
             </div>
@@ -231,7 +231,7 @@ export function AppSidebar() {
                         <div className="flex items-center gap-2 w-full min-w-0">
                           {/* Agent name */}
                           <p className="text-xs font-medium truncate flex-1">
-                            {conversation.agents?.name || "Agent inconnu"}
+                            {conversation.agents?.name || "Unknown agent"}
                           </p>
 
                           {/* Score */}
@@ -258,13 +258,13 @@ export function AppSidebar() {
                 // No conversations
                 <div className="px-3 py-2">
                   <p className="text-sm text-muted-foreground text-center">
-                    Aucune conversation
+                    No conversations
                   </p>
                   <Link
                     href="/simulation/configure"
                     className="text-sm text-[#781397] hover:text-[#79408a] block text-center mt-2"
                   >
-                    Créer votre première
+                    Create your first
                   </Link>
                 </div>
               )}
@@ -279,7 +279,7 @@ export function AppSidebar() {
           onClick={handleLogout}
         >
           <Icon icon="mdi:logout" className="mr-2 h-4 w-4" />
-          Se déconnecter
+          Sign out
         </Button>
       </SidebarFooter>
     </Sidebar>
