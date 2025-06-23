@@ -72,9 +72,9 @@ const callTypes = [
 ];
 
 const historiqueOptions: HistoriqueRelation[] = [
-  "First contact",
-  "2nd call",
-  "Post-quote follow-up",
+  "Premier contact",
+  "2ème appel",
+  "Relance post-devis",
 ];
 
 export function SimulationStepper() {
@@ -91,7 +91,7 @@ export function SimulationStepper() {
     context: {
       secteur: "",
       company: "",
-      historique_relation: "First contact",
+      historique_relation: "Premier contact",
     },
   });
 
