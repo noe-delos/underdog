@@ -333,7 +333,7 @@ export function Dashboard() {
               <div className="text-center">
                 <img
                   src="https://cdn.prod.website-files.com/67c02b51f44e21ab7d1b30fb/67f40255381e82665f8b0867_ede6cc53-fecb-4508-8516-9a5b3ef248d7-p-500.webp"
-                  className="w-[16rem] h-fit mx-auto mb-3 filter brightness-0 invert"
+                  className="w-[6rem] h-fit mx-auto mb-3 filter brightness-0 invert"
                   alt="Underdog Sales Logo"
                 />
                 <p className="text-sm font-semibold text-white mb-1 drop-shadow-md">

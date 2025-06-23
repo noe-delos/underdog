@@ -159,8 +159,8 @@ export function AppSidebar() {
         <SidebarGroup>
           <SidebarGroupLabel className="text-lg font-bold mb-4 pt-4 flex items-center gap-2">
             <img
-              src="https://cdn.prod.website-files.com/67c02b51f44e21ab7d1b30fb/67f40255381e82665f8b0867_ede6cc53-fecb-4508-8516-9a5b3ef248d7-p-500.webp"
-              className="size-fit w-[14rem]"
+              src="https://lwfiles.mycourse.app/66a34643427fb822356beb49-public/c740ace6b5622c180c43d903f1358f11.png"
+              className="size-fit w-[3.5rem]"
               alt="Underdog Sales Logo"
             />
           </SidebarGroupLabel>

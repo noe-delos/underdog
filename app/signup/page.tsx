@@ -27,7 +27,7 @@ export default function SignupPage() {
             <div className="flex items-center gap-3 mb-8">
               <img
                 src="https://cdn.prod.website-files.com/67c02b51f44e21ab7d1b30fb/67f40255381e82665f8b0867_ede6cc53-fecb-4508-8516-9a5b3ef248d7-p-500.webp"
-                className="w-[20rem] h-fit"
+                className="w-[8rem] h-fit"
                 alt="Underdog Sales Logo"
               />
             </div>
@@ -95,7 +95,7 @@ export default function SignupPage() {
               <div className="w-12 h-12 bg-gradient-to-br from-[#021945] to-[#E7B220] rounded-xl flex items-center justify-center">
                 <img
                   src="https://cdn.prod.website-files.com/67c02b51f44e21ab7d1b30fb/67f40255381e82665f8b0867_ede6cc53-fecb-4508-8516-9a5b3ef248d7-p-500.webp"
-                  className="w-8 h-8 object-contain"
+                  className="w-4 h-4 object-contain"
                   alt="Underdog Sales Logo"
                 />
               </div>

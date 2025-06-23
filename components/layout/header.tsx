@@ -94,7 +94,7 @@ export function Header({ breadcrumbs }: HeaderProps) {
                 <AvatarImage
                   src={
                     user?.picture_url ||
-                    "https://cdn.prod.website-files.com/67c02b51f44e21ab7d1b30fb/67f40255381e82665f8b0867_ede6cc53-fecb-4508-8516-9a5b3ef248d7-p-500.webp"
+                    "https://cdn.prod.website-files.com/67c02b51f44e21ab7d1b30fb/67c03265e40fae8c86650c2d_Giulio-Segantini-Underdog-Sales-1024x1024.webp"
                   }
                   alt="User"
                 />
